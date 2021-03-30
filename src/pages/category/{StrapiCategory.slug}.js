@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Articles from "../../components/Articles"
-import Layout from "../../components/layout"
+import Layout from "../../components/Layout"
 
 export const query = graphql`
   query Category($slug: String!) {

@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Moment from "react-moment"
-import Layout from "../../components/layout"
+import Layout from "../../components/Layout"
 import Markdown from "react-markdown"
 
 export const query = graphql`
