@@ -4,6 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Moment from "react-moment"
 import Layout from "../../components/Layout"
 import Markdown from "react-markdown"
+import SEO from "../../components/seo"
 
 export const query = graphql`
   query ArticleQuery($slug: String!) {
@@ -50,6 +51,7 @@ const Article = ({ data }) => {
 
   return (
     <Layout>
+      <SEO title={article.title}/>
       <div className="container mx-auto">
         <div>
           <div className="flex justify-center">

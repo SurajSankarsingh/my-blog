@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Articles from "../../components/Articles"
 import Layout from "../../components/Layout"
+import SEO from "../../components/seo"
 
 export const query = graphql`
   query Category($slug: String!) {
@@ -56,6 +57,7 @@ const Category = ({ data }) => {
 
   return (
     <Layout>
+      <SEO title={category.toUpperCase()}/>
       <div className="flex flex-col text-center w-full mb-12">
         <h1 className="font-sans text-3xl uppercase md:text-5xl mt-5 mb-3 text-gray-800 dark:text-gray-300">
           {category}
