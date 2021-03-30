@@ -1,3 +1,113 @@
+/* Additional vertical padding used by kbd tag. */
+.py-05 {
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+}
+
+.markdown {
+  @apply text-gray-700 dark:text-gray-200 space-x-2 leading-normal break-words font-sans p-3 text-base lg:text-lg;
+}
+
+.markdown > * + * {
+  @apply mt-8 mb-8;
+}
+
+.markdown li + li {
+  @apply mt-4;
+}
+
+.markdown li > p + p {
+  @apply mt-6;
+}
+
+.markdown strong {
+  @apply font-semibold;
+}
+
+.markdown a {
+  @apply text-purple-600 font-semibold;
+}
+
+.markdown strong a {
+  @apply font-bold font-serif;
+}
+
+.markdown h1 {
+  @apply leading-tight border-b text-4xl md:text-6xl lg:text-8xl font-semibold mb-4 mt-6 pb-2 text-gray-700 dark:text-gray-200;
+}
+
+.markdown h2 {
+  @apply leading-tight border-b text-6xl font-semibold mb-4 mt-6 pb-2 text-gray-700 dark:text-gray-200;
+}
+
+.markdown h3 {
+  @apply leading-snug text-4xl font-semibold mb-4 mt-6 text-gray-700 dark:text-gray-200;
+}
+
+.markdown h4 {
+  @apply leading-none text-2xl font-semibold mb-4 mt-6 text-gray-700 dark:text-gray-200;
+}
+
+.markdown h5 {
+  @apply leading-tight text-lg font-semibold mb-4 mt-6 text-gray-700 dark:text-gray-200;
+}
+
+.markdown h6 {
+  @apply leading-tight text-base font-semibold mb-4 mt-6 text-gray-700 dark:text-gray-200;
+}
+
+.markdown blockquote {
+  @apply text-base border-l-4 border-gray-300 pl-4 pr-4 text-gray-700 dark:text-gray-200;
+}
+
+.markdown code {
+  @apply text-base flex-wrap bg-gray-300 dark:bg-gray-700 rounded px-1 py-05 text-gray-700 dark:text-gray-200;
+}
+
+.markdown pre {
+  @apply bg-gray-400 dark:bg-gray-700 max-w-4xl whitespace-pre-wrap rounded p-4 text-gray-700 dark:text-gray-200;
+}
+
+.markdown pre code {
+  @apply block bg-transparent p-0 overflow-visible rounded-none text-gray-700 dark:text-gray-200;
+}
+
+.markdown ul {
+  @apply text-base pl-8 list-disc ;
+}
+
+.markdown ol {
+  @apply text-base pl-8 list-decimal;
+}
+
+.markdown kbd {
+  @apply text-xs inline-block rounded border px-1 py-05 align-middle font-normal shadow;
+}
+
+.markdown table {
+  @apply text-base border-gray-600;
+}
+
+.markdown th {
+  @apply border py-3 px-5;
+}
+
+.markdown td {
+  @apply border py-3 px-5;
+}
+
+.markdown span {
+  @apply relative;
+}
+
+.markdown iframe {
+  @apply w-full max-w-4xl;
+}
+/* Override pygments style background color. */
+.markdown .highlight pre {
+  @apply bg-gray-100 !important;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

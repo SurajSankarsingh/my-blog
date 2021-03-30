@@ -1,12 +1,6 @@
 import React from "react"
-import { Link } from 'gatsby'
 import { StaticImage } from "gatsby-plugin-image"
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaEnvelope,
-  FaLinkedinIn,
-} from "react-icons/fa"
+import SocialLinks from "../components/SocialLinks"
 
 const Footer = () => {
   return (
@@ -25,38 +19,7 @@ const Footer = () => {
             © Suraj Sankarsingh {new Date().getFullYear()}
           </p>
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-            <Link
-              to="https://facebook.com/surajsankarsingh/"
-              className="text-gray-900 dark:text-gray-300 hover:text-purple-700 dark:hover:text-yellow-600"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaFacebookF />
-            </Link>
-            <Link
-              to="https://twitter.com/suraj_dev_tt/"
-              className="ml-3 text-gray-900 dark:text-gray-300 hover:text-purple-700 dark:hover:text-yellow-600"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaTwitter />
-            </Link>
-            <Link
-              to="mailto:sankarsinghsuraj@gmail.com"
-              className="ml-3 text-gray-900 dark:text-gray-300 hover:text-purple-700 dark:hover:text-yellow-600"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaEnvelope />
-            </Link>
-            <Link
-              to="https://www.linkedin.com/in/suraj-sankarsingh-51479a178/"
-              className="ml-3 text-gray-900 dark:text-gray-300 hover:text-purple-700 dark:hover:text-yellow-600"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaLinkedinIn />
-            </Link>
+            <SocialLinks />
           </span>
         </div>
       </footer>

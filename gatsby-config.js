@@ -18,22 +18,21 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    // {
-    //   resolve: "gatsby-source-strapi",
-    //   options: {
-    //     apiURL: process.env.API_URL || "http://localhost:1337",
-    //     contentTypes: ["article", "category", "writer"],
-    //     singleTypes: [`homepage`, `global`],
-    //     queryLimit: 1000,
-    //   },
-    // },
+    {
+      resolve: "gatsby-source-strapi",
+      options: {
+        apiURL: process.env.API_URL || "http://localhost:1337",
+        contentTypes: ["article", "category", "writer"],
+        queryLimit: 1000,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `gatsby-tailwind-strapi-blog`,
+        short_name: `suraj blog`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,

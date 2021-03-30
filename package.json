@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "gatsby-tailwind-strapi-blog",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "This is the personal blog website for Suraj Sankarsingh",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Suraj Sankarsingh <sankarsinghsuraj@gmail.com>",
   "dependencies": {
     "@fontsource/montserrat": "^4.2.2",
     "@fontsource/raleway": "^4.2.2",
@@ -18,11 +18,14 @@
     "gatsby-source-filesystem": "^3.0.0",
     "gatsby-source-strapi": "0.0.12",
     "gatsby-transformer-sharp": "^3.0.0",
+    "moment": "^2.29.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.2.0",
+    "react-markdown": "^5.0.3",
+    "react-moment": "^1.1.1",
     "tailwindcss": "^2.0.3"
   },
   "devDependencies": {
@@ -43,9 +46,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/SurajSankarsingh/my-blog"
   }
 }
