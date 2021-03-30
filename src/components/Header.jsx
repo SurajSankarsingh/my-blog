@@ -27,14 +27,14 @@ const Header = () => {
         <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
           <Link
             to="/"
-            className="mr-5 text-gray-900 dark:text-gray-300 hover:text-purple-700 dark:hover:text-yellow-600"
+            className=" text-gray-900 dark:text-gray-300 hover:text-purple-700 dark:hover:text-yellow-600"
           >
             Home
           </Link>
-          <div className="relative">
+          <div className="relative grid justify-center">
             <button
               onClick={() => setisDropDown(!isDropDown)}
-              className="mr-5 justify-items-center text-gray-900 dark:text-gray-300 hover:text-purple-700 dark:hover:text-yellow-600 focus:outline-none"
+              className="mr-5 ml-5 justify-items-center text-gray-900 dark:text-gray-300 hover:text-purple-700 dark:hover:text-yellow-600 focus:outline-none"
             >
               Categories
             </button>

@@ -16,7 +16,7 @@ const SocialLinks = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <FaFacebookF />
+        <FaFacebookF className="w-6 h-6" />
       </Link>
       <Link
         to="https://twitter.com/suraj_dev_tt/"
@@ -24,7 +24,7 @@ const SocialLinks = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <FaTwitter />
+        <FaTwitter className="w-6 h-6" />
       </Link>
       <Link
         to="https://www.linkedin.com/in/suraj-sankarsingh-51479a178/"
@@ -32,7 +32,7 @@ const SocialLinks = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <FaLinkedinIn />
+        <FaLinkedinIn className="w-6 h-6" />
       </Link>
       <a
         href="mailto:sankarsinghsuraj@gmail.com"
@@ -40,7 +40,7 @@ const SocialLinks = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <FaEnvelope />
+        <FaEnvelope className="w-6 h-6" />
       </a>
     </span>
   )
