@@ -13,7 +13,7 @@ export const query = graphql`
       title
       description
       content
-      publishedAt
+      publishedAt 
       image {
         publicURL
         childImageSharp {
@@ -85,7 +85,7 @@ const Article = ({ data }) => {
                   By {article.author.name}
                 </p>
                 <p className="font-serif font-medium text-sm md:text-base text-gray-700 dark:text-gray-200">
-                  <Moment format="MMM Do YYYY">{article.published_at}</Moment>
+                  <Moment format="MMM Do YYYY">{article.publishedAt}</Moment>
                 </p>
               </div>
             </div>

@@ -5,7 +5,6 @@ import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import Articles from "../components/Articles"
 
-
 const IndexPage = () => {
   const data = useStaticQuery(query)
 
@@ -16,7 +15,11 @@ const IndexPage = () => {
         <h1 className="font-sans text-3xl md:text-5xl mt-5 mb-3 text-gray-800 dark:text-gray-300">
           Welcome to My Blog
         </h1>
-        <p className='font-serif text-base md:text-lg mt-6 text-gray-800 dark:text-gray-300'>This is the place where I share my thoughts of various topics I find interesting. Feel free to contact me via my social links if you have any questions. </p>
+        <p className="font-serif text-base md:text-lg mt-6 text-gray-800 dark:text-gray-300">
+          This is the place where I share my thoughts of various topics I find
+          interesting. Feel free to contact me via my social links if you have
+          any questions.{" "}
+        </p>
       </div>
 
       <Articles articles={data.allStrapiArticle.edges} />
@@ -26,13 +29,14 @@ const IndexPage = () => {
 
 const query = graphql`
   query {
-    allStrapiArticle(filter: { status: { eq: "published" }, featured: {eq: true} }) {
+    allStrapiArticle(
+      filter: { status: { eq: "published" }, featured: { eq: true } }
+    ) {
       edges {
         node {
           strapiId
           slug
           title
-          publishedAt
           category {
             name
           }
