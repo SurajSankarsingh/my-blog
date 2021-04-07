@@ -65,7 +65,7 @@ const Article = ({ data }) => {
           
         </div>
 
-        <div className="container mt-16">
+        <div className="container mt-12 xl:w-3/4 3xl:w-3/5 mx-auto">
           <div className="text-gray-700 dark:text-gray-200">
             <article className="markdown">
               <Markdown source={article.content} escapeHtml={false} />
