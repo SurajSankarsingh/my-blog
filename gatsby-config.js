@@ -34,8 +34,8 @@ module.exports = {
         name: `gatsby-tailwind-strapi-blog`,
         short_name: `suraj blog`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#000000`,
+        theme_color: `#000000`,
         display: `minimal-ui`,
         icon: `src/images/logo.png`, // This path is relative to the root of the site.
       },
@@ -47,7 +47,15 @@ module.exports = {
       },
     },
     `gatsby-plugin-gatsby-cloud`,
-    // `gatsby-plugin-csp`,
+    {
+      resolve: `gatsby-plugin-csp`,
+      options: {
+        disableOnDev: true,
+        directives: {
+          "style-src": "'self' 'unsafe-inline'",
+        },
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
