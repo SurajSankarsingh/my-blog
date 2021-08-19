@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import Moment from "react-moment"
 import Layout from "../../components/Layout"
 import Markdown from "react-markdown"
@@ -13,30 +13,34 @@ export const query = graphql`
       title
       description
       content
-      publishedAt 
+      publishedAt
       image {
-        publicURL
-        childImageSharp {
-          gatsbyImageData(
-            width: 1500
-            height: 800
-            placeholder: BLURRED
-            formats: [AUTO, WEBP, AVIF]
-            quality: 95
-          )
+        localFile {
+          publicURL
+          childImageSharp {
+            gatsbyImageData(
+              width: 1500
+              height: 800
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+              quality: 95
+            )
+          }
         }
       }
       author {
         name
         picture {
-          childImageSharp {
-            gatsbyImageData(
-              width: 50
-              height: 50
-              placeholder: BLURRED
-              formats: [AUTO, WEBP, AVIF]
-              quality: 95
-            )
+          localFile {
+            childImageSharp {
+              gatsbyImageData(
+                width: 50
+                height: 50
+                placeholder: BLURRED
+                formats: [AUTO, WEBP, AVIF]
+                quality: 95
+              )
+            }
           }
         }
       }
@@ -46,12 +50,10 @@ export const query = graphql`
 
 const Article = ({ data }) => {
   const article = data.strapiArticle
-  const articleImage = getImage(article.image)
-  const authurImage = getImage(article.author.picture)
 
   return (
     <Layout>
-      <SEO title={article.title}/>
+      <SEO title={article.title} />
       <div className="container mx-auto">
         <div>
           <div className="flex justify-center">
@@ -60,9 +62,12 @@ const Article = ({ data }) => {
             </h1>
           </div>
           <div className="flex justify-center p-2">
-            <GatsbyImage image={articleImage} className="max-w-6xl" />
+            <GatsbyImage
+              image={article.image.localFile.childImageSharp.gatsbyImageData}
+              className="max-w-6xl"
+              alt={article.title}
+            />
           </div>
-          
         </div>
 
         <div className="container mt-12 xl:w-3/4 3xl:w-3/5 mx-auto">
@@ -75,8 +80,12 @@ const Article = ({ data }) => {
               <div className="mb-2 mx-2">
                 {article.author.picture && (
                   <GatsbyImage
-                    image={authurImage}
+                    image={
+                      article.author.picture.localFile.childImageSharp
+                        .gatsbyImageData
+                    }
                     className="w-8 h-8 md:w-14 md:h-14 rounded-full"
+                    alt={`Image of ${article.author.name}`}
                   />
                 )}
               </div>

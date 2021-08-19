@@ -58,14 +58,14 @@ const Header = () => {
               ))}
             </div>
           </div>
-          <Link
-            to="https://surajsankarsingh.dev"
+          <a
+            href="https://surajsankarsingh.dev"
             className="text-gray-900 dark:text-gray-300 hover:text-purple-700 dark:hover:text-yellow-600"
             target="_blank"
             rel="noreferrer"
           >
             Portfolio
-          </Link>
+          </a>
         </nav>
 
         <SocialLinks />

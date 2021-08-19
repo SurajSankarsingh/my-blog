@@ -1,6 +1,6 @@
 require("dotenv").config({
   path: `.env`,
-});
+})
 
 module.exports = {
   siteMetadata: {
@@ -22,7 +22,7 @@ module.exports = {
       resolve: "gatsby-source-strapi",
       options: {
         apiURL: process.env.API_URL || "http://localhost:1337",
-        contentTypes: ["article", "category", "writer"],
+        collectionTypes: ["article", "category", "writer"],
         queryLimit: 1000,
       },
     },
@@ -47,6 +47,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-gatsby-cloud`,
+    `gatsby-plugin-csp`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,

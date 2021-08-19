@@ -23,14 +23,12 @@ module.exports = {
       transparent: "transparent",
       current: "currentColor",
       gray: colors.trueGray,
-      blue: colors.lightBlue,
+      blue: colors.sky,
       yellow: colors.orange,
       purple: colors.purple,
       red: colors.rose,
     },
-    extend: {
-      
-    },
+    extend: {},
     variants: {
       extend: {},
     },

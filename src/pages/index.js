@@ -41,27 +41,31 @@ const query = graphql`
             name
           }
           image {
-            childImageSharp {
-              gatsbyImageData(
-                width: 1500
-                height: 800
-                placeholder: BLURRED
-                formats: [AUTO, WEBP, AVIF]
-                quality: 95
-              )
+            localFile {
+              childImageSharp {
+                gatsbyImageData(
+                  width: 1500
+                  height: 800
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                  quality: 95
+                )
+              }
             }
           }
           author {
             name
             picture {
-              childImageSharp {
-                gatsbyImageData(
-                  width: 50
-                  height: 50
-                  placeholder: BLURRED
-                  formats: [AUTO, WEBP, AVIF]
-                  quality: 95
-                )
+              localFile {
+                childImageSharp {
+                  gatsbyImageData(
+                    width: 50
+                    height: 50
+                    placeholder: BLURRED
+                    formats: [AUTO, WEBP, AVIF]
+                    quality: 95
+                  )
+                }
               }
             }
           }
