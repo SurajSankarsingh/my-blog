@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Moment from "react-moment"
 import Layout from "../../components/Layout"
 import Markdown from "react-markdown"
@@ -50,7 +50,12 @@ export const query = graphql`
 
 const Article = ({ data }) => {
   const article = data.strapiArticle
-
+  const articleImage = getImage(
+    article.image.localFile.childImageSharp.gatsbyImageData
+  )
+  const authorImage = getImage(
+    article.author.picture.localFile.childImageSharp.gatsbyImageData
+  )
   return (
     <Layout>
       <SEO title={article.title} />
@@ -63,7 +68,7 @@ const Article = ({ data }) => {
           </div>
           <div className="flex justify-center p-2">
             <GatsbyImage
-              image={article.image.localFile.childImageSharp.gatsbyImageData}
+              image={articleImage}
               className="max-w-6xl"
               alt={article.title}
             />
@@ -80,10 +85,7 @@ const Article = ({ data }) => {
               <div className="mb-2 mx-2">
                 {article.author.picture && (
                   <GatsbyImage
-                    image={
-                      article.author.picture.localFile.childImageSharp
-                        .gatsbyImageData
-                    }
+                    image={authorImage}
                     className="w-8 h-8 md:w-14 md:h-14 rounded-full"
                     alt={`Image of ${article.author.name}`}
                   />
