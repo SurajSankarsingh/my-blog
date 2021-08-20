@@ -52,8 +52,8 @@ module.exports = {
       options: {
         disableOnDev: true,
         reportOnly: false,
-        mergeScriptHashes: true,
-        mergeStyleHashes: true,
+        mergeScriptHashes: false,
+        mergeStyleHashes: false,
         mergeDefaultDirectives: true,
         directives: {
           "style-src": "'self' 'unsafe-inline'",
