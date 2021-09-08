@@ -31,7 +31,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-tailwind-strapi-blog`,
+        name: `personal-blog`,
         short_name: `suraj blog`,
         start_url: `/`,
         background_color: `#000000`,

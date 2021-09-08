@@ -21,7 +21,7 @@ const SocialLinks = () => {
         <FaLinkedinIn className="w-6 h-6" />
       </a>
       <a
-        href="mailto:sankarsinghsuraj@gmail.com"
+        href="mailto:hello@surajsankarsingh.dev"
         className="ml-3 text-gray-900 dark:text-gray-300 hover:text-purple-700 dark:hover:text-yellow-600"
         target="_blank"
         rel="noreferrer"
