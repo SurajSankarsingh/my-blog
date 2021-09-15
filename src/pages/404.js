@@ -23,7 +23,7 @@ const NotFoundPage = () => (
           404: Not Found
         </h1>
         <p className="flex flex-row justify-center text-xl sm:text-2xl md:text-4xl lg:text-6xl">
-          Sad Cat is Sad!!
+          Sad Cat is Super Sad!!
         </p>
       </div>
     </div>
